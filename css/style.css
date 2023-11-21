@@ -1,0 +1,646 @@
+/* Generic CSS */
+
+:root {
+  --primary-color: #0065fc;
+  --secondary-color: #deebff;
+  --tertiary-color: #f2f2f2;
+  --quaternary-color: #d9d9d9;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --extra-large-font-size: 22px;
+  --large-font-size: 18px;
+  --medium-font-size: 16px;
+  --small-font-size: 14px;
+  --bold-font-weight: 700;
+}
+
+.pageWrapper {
+  font-family: "Raleway", sans-serif;
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.titles {
+  font-size: var(--extra-large-font-size);
+  font-weight: var(--bold-font-weight);
+  margin: 0px;
+}
+
+/* header */
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: 32px;
+  width: 61px;
+  height: 19px;
+}
+
+.navigationMenu {
+  display: flex;
+  font-size: var(--medium-font-size);
+  gap: 68px;
+}
+
+.navigationLink {
+  padding: 16px 0 0 0;
+}
+
+.navigationLink:hover {
+  border-top: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding-top: 14px;
+}
+
+/* main */
+
+.searchSection {
+  margin: 64px 0 32px 0;
+}
+
+.descriptionText {
+  margin: 8px 0 32px 0;
+  font-size: var(--medium-font-size);
+}
+
+.citySearchForm {
+  display: flex;
+}
+
+.citySearchInputWrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 15px 0px 0px 15px;
+  background-color: var(--tertiary-color);
+}
+
+.locationIconWrapper {
+  display: flex;
+  padding: 16px 18px;
+}
+
+.citySearchInput {
+  border: 1px solid var(--tertiary-color);
+  padding: 16px;
+  font-weight: var(--bold-font-weight);
+  font-size: var(--large-font-size);
+}
+
+.citySearchInput::placeholder {
+  color: var(--black-color);
+  opacity: 1;
+}
+
+.citySearchButton {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 0px 15px 15px 0px;
+  padding: 16px;
+  font-weight: var(--bold-font-weight);
+  font-size: var(--large-font-size);
+  cursor: pointer;
+}
+
+.magnifyingGlass {
+  visibility: hidden;
+}
+
+.searchWithFilters {
+  display: flex;
+  align-items: baseline;
+  font-size: var(--large-font-size);
+  font-weight: var(--bold-font-weight);
+  margin: 32px 0;
+  gap: 16px;
+}
+
+.filtersWrapperTitle {
+  font-size: var(--large-font-size);
+  margin: 0px;
+}
+
+.searchWithFiltersWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.searchWithFiltersCards {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--quaternary-color);
+  border-radius: 45px;
+  padding: 15px 19px;
+  gap: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.searchWithFiltersCards:hover {
+  background-color: var(--secondary-color);
+}
+
+.searchWithFiltersIcons {
+  color: var(--primary-color);
+  font-size: var(--extra-large-font-size);
+}
+
+.filterName {
+  margin: 0;
+}
+
+.informationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.informationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border: 1px solid var(--quaternary-color);
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 12px;
+}
+
+.informationText {
+  margin: 0px;
+  font-size: var(--medium-font-size);
+}
+
+/* Section - hosts */
+
+.hostsSection {
+  display: flex;
+  gap: 40px;
+}
+
+#hostsContent {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tertiary-color);
+  border-radius: 20px;
+  padding: 32px;
+  width: 66%;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.hostsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.hostCard {
+  border: 5px solid var(--white-color);
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px var(--quaternary-color);
+  background-color: var(--white-color);
+  width: calc(33% - 25px);
+}
+
+.hostPicture {
+  width: 100%;
+  height: 124px;
+  border-radius: 20px 20px 0px 0px;
+  object-fit: cover;
+}
+
+.hostInformations {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px 16px 16px 16px;
+}
+
+.hostName,
+.price {
+  font-weight: var(--bold-font-weight);
+}
+
+.hostName {
+  margin: 0px;
+  font-size: var(--medium-font-size);
+  font-weight: var(--bold-font-weight);
+}
+
+.hostPrice {
+  margin: 0px;
+  font-size: var(--small-font-size);
+}
+
+.hostRating {
+  color: var(--primary-color);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.greyStar {
+  color: var(--tertiary-color);
+}
+
+.moreHostsLinkWrapper {
+  margin-top: 40px;
+}
+
+.moreHostsLink {
+  font-weight: var(--bold-font-weight);
+  font-size: var(--large-font-size);
+}
+
+/* Section - Most popular hosts */
+
+.mostPopularHostsAside {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tertiary-color);
+  border-radius: 20px;
+  padding: 32px 32px 0px 32px;
+  width: 33%;
+  gap: 32px;
+}
+
+.mostPopularHostsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.mostPopularHostsChartIcon {
+  align-items: center;
+  justify-content: flex-end;
+  color: #0065fc;
+  font-size: 20px;
+}
+
+.mostPopularHostsCardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mostPopularHostCard {
+  border: 5px solid var(--white-color);
+  border-radius: 20px;
+  box-shadow: 2px 5px 10px var(--quaternary-color);
+  background-color: var(--white-color);
+}
+
+.mostPopularHostContent {
+  display: flex;
+}
+
+.mostPopularHostPicturesWrapper {
+  display: flex;
+}
+
+.mostPopularHostPictures {
+  height: 150px;
+  width: 127px;
+  border-radius: 20px 0px 0px 20px;
+  object-fit: cover;
+}
+
+.mostPopularhostInformationsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 16px;
+}
+
+.mostPopularHostInformations {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Section - Activities Marseille */
+
+#activitiesContent {
+  margin: 64px 0;
+}
+
+.activitiesMarseilleWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  gap: 32px;
+  justify-content: space-around;
+}
+
+.activitiesMarseille {
+  width: calc(25% - 30px);
+}
+
+.activitiesPictures {
+  width: 100%;
+  height: 389px;
+  border-radius: 20px 20px 0px 0px;
+  object-fit: cover;
+}
+
+.activityName {
+  border: 0px solid var(--tertiary-color);
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: 0px 5px 10px var(--quaternary-color);
+  margin: -3px 0px 0px 0px;
+  padding: 24px 0px 0px 16px;
+  height: 50px;
+  font-weight: var(--bold-font-weight);
+  font-size: var(--medium-font-size);
+  flex-wrap: wrap;
+}
+
+/* Footer */
+
+.footerWrapper {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  padding: 24px;
+  background-color: var(--tertiary-color);
+  gap: 32px;
+}
+
+.footerLinksWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.footerTitle {
+  font-weight: var(--bold-font-weight);
+  font-size: var(--large-font-size);
+  margin: 0;
+}
+
+.footerLinks {
+  font-size: var(--medium-font-size);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1440px) {
+  .pageWrapper {
+    margin: 0 48px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .hostsSection {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  #hostsContent {
+    width: calc(100% - 62px);
+  }
+
+  .mostPopularHostsAside {
+    width: calc(100% - 62px);
+    padding-bottom: 32px;
+  }
+
+  .mostPopularHostsCardWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .mostPopularHostCard {
+    width: calc(33% - 19px);
+    margin-bottom: 0px;
+  }
+
+  .mostPopularHostPictures {
+    width: 96px;
+  }
+
+  .mostPopularhostInformationsWrapper {
+    padding: 5px 5px 5px 10px;
+  }
+
+  .activitiesMarseille {
+    width: calc(25% - 36px);
+  }
+
+  .activitiesPictures {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pageWrapper {
+    margin: 0;
+  }
+
+  .headerWrapper {
+    flex-direction: column;
+  }
+
+  .logo {
+    display: flex;
+    align-self: center;
+    margin: 32px;
+  }
+
+  .navigationMenu {
+    gap: 0px;
+  }
+
+  .navigationLink {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    border-bottom: 2px solid var(--quaternary-color);
+    padding: 0px 32px 32px 32px;
+  }
+
+  .navigationLink:hover {
+    border-top: none;
+    border-bottom: 2px solid var(--primary-color);
+    padding: 0px 32px 30px 32px;
+  }
+
+  .searchSection {
+    margin: 32px 24px 24px 32px;
+  }
+
+  .searchSection .titles {
+    margin-bottom: 16px;
+  }
+
+  .citySearchForm {
+    justify-content: center;
+    margin: 32px 0px 0px 0px;
+  }
+
+  .citySearchButton {
+    display: none;
+  }
+
+  .magnifyingGlass {
+    visibility: initial;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 15px;
+    margin-left: -13px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .searchWithFilters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .searchWithFiltersWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .searchWithFiltersCards {
+    font-size: var(--small-font-size);
+  }
+
+  .informationWrapper {
+    margin-top: 32px;
+  }
+
+  .hostsSection {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+
+  #hostsContent {
+    background-color: var(--white-color);
+    margin: 0px 24px 24px 24px;
+    padding: 0px;
+    gap: 16px;
+    width: calc(100% - 48px);
+  }
+
+  .hostsWrapper {
+    gap: 16px;
+  }
+
+  .hostCard {
+    width: 100%;
+  }
+
+  .hostPicture {
+    width: 100%;
+    height: 124px;
+  }
+
+  .hostInformations {
+    padding: 8px 0px 16px 16px;
+  }
+
+  .hostName {
+    font-size: var(--medium-font-size);
+  }
+
+  .hostPrice {
+    font-size: var(--small-font-size);
+  }
+
+  .mostPopularHostsAside {
+    border-radius: 0px;
+    padding: 32px 24px;
+    width: calc(100% - 48px);
+    gap: 16px;
+  }
+
+  .mostPopularHostsCardWrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .mostPopularHostCard {
+    width: calc(100% - 10px);
+  }
+
+  .mostPopularHostPictures {
+    height: 144px;
+    width: 137px;
+  }
+
+  .mostPopularhostInformationsWrapper {
+    padding: 16px;
+  }
+
+  #activitiesContent {
+    margin: 64px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .activitiesMarseilleWrapper {
+    flex-direction: column;
+    margin: 0px;
+    gap: 16px;
+  }
+
+  .activitiesMarseille {
+    width: 100%;
+  }
+
+  .activitiesPictures {
+    height: 134px;
+    width: 100%;
+  }
+
+  .footerWrapper {
+    flex-direction: column;
+    margin: 0px;
+    padding: 32px;
+    gap: 48px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .searchSection {
+    margin: 32px 8px 32px 8px;
+  }
+
+  .locationIconWrapper {
+    padding: 8px 12px;
+  }
+
+  .magnifyingGlass {
+    padding: 10px;
+  }
+
+  .searchWithFiltersWrapper {
+    gap: 8px;
+  }
+
+  .searchWithFiltersCards {
+    padding: 8px 12px;
+  }
+}
