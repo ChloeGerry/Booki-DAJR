@@ -1,0 +1,21 @@
+@media screen and (max-width: 380px) {
+  .search-section {
+    margin: 32px 8px 32px 8px;
+  }
+
+  .location-icon-wrapper {
+    padding: 8px 12px;
+  }
+
+  .magnifying-glass {
+    padding: 10px;
+  }
+
+  .search-with-filters-wrapper {
+    gap: 8px;
+  }
+
+  .search-with-filter-Card {
+    padding: 8px 12px;
+  }
+}
